@@ -16,11 +16,11 @@ Nesta pasta, você encontrará os códigos referentes às aulas expositivas. Sã
 
 Aqui estão armazenados os códigos correspondentes às atividades práticas. Essas práticas visam fortalecer os conceitos aprendidos em sala, proporcionando oportunidades para aplicação e exercício das habilidades adquiridas.
 
-Diego\
+Diego
 
-Fillipe\
+Fillipe
 
-Guilherme\
+Guilherme
 
 Kauã
 
