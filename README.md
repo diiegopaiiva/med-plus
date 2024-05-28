@@ -1,67 +1,66 @@
-# Projeto: Gerenciador de Tarefas
+# Sistema de Agendamento de Consultas e Exames
 
-## Descrição
-
-O Gerenciador de Tarefas é uma aplicação que permite aos usuários criar, visualizar, atualizar e excluir tarefas. Cada tarefa pode ter um título, descrição, status (a fazer, em progresso, concluído) e data de vencimento.
-
-## Tecnologias usadas
-
-- Backend: Node.js com Express
-- Banco de Dados: MongoDB
-- Autenticação: JWT (JSON Web Tokens) para autenticação de usuários
+Este projeto é uma API RESTful desenvolvida utilizando o framework Express para gerenciar o agendamento de consultas e exames médicos. O sistema permite que pacientes mantenham seus cadastros atualizados, agendem consultas e associem essas consultas a médicos cadastrados. Além disso, a aplicação mantém um cadastro de médicos e clínicas de Brasília.
 
 ## Funcionalidades
 
-1.Registro de Usuários:
+- CRUD (Create, Read, Update, Delete) de Pacientes
+- CRUD de Médicos
+- CRUD de Clínicas
+- CRUD de Consultas
+- Autenticação e autorização de usuários
+- Validação de regras de negócio para garantir a integridade dos dados
 
-- Permitir que novos usuários se registrem com nome, email e senha.
-  
-2.Login de Usuários:
+## Tecnologias Utilizadas
 
-- Permitir que usuários façam login e recebam um token JWT.
-
-3.CRUD de Tarefas:
-
-- Criar Tarefa: Endpoint para criar uma nova tarefa.
-- Visualizar Tarefas: Endpoint para listar todas as tarefas de um usuário.
-- Atualizar Tarefa: Endpoint para atualizar detalhes de uma tarefa.
-- Excluir Tarefa: Endpoint para excluir uma tarefa.
-
-4.Gerenciamento de Status de Tarefas:
-
-- Permitir que o status da tarefa seja atualizado (a fazer, em progresso, concluído).
-
-5.Filtragem e Ordenação:
-
-- Filtrar tarefas por status.
-- Ordenar tarefas por data de vencimento.
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT (JSON Web Token) para autenticação
+- Bcrypt.js para hash de senhas
+- Nodemailer para envio de e-mails
+- Node-cron para agendamento de tarefas
+- Jest para testes unitários
+- Swagger para documentação da API
 
 ## Estrutura do Projeto
 
-### Rotas (Endpoints)
-- Usuários:
+- **/controllers**: Contém os controladores que implementam a lógica das operações CRUD.
+- **/models**: Contém os modelos Mongoose que representam os dados no banco de dados.
+- **/routes**: Contém as definições das rotas da API.
+- **/middlewares**: Contém os middlewares para autenticação e validação.
+- **/config**: Contém as configurações da aplicação, como a conexão com o banco de dados.
+- **/tests**: Contém os testes unitários.
 
-  - POST /register: Registrar um novo usuário.
-  - POST /login: Fazer login de um usuário.
-    
-- Tarefas:
+## Instalação e Execução
 
-  - POST /tasks: Criar uma nova tarefa.
-  - GET /tasks: Listar todas as tarefas do usuário logado.
-  - GET /tasks/:id: Obter detalhes de uma tarefa específica.
-  - PUT /tasks/:id: Atualizar uma tarefa existente.
-  - DELETE /tasks/:id: Excluir uma tarefa.
+### Pré-requisitos
 
-## Membros da Equipe:
+- Node.js e npm
+- MongoDB
 
+### Passos
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/diiegopaiiva/pi-back.git
+   cd pi-back
+
+2. Instale as dependências:
+   ```bash
+   npm install
+
+3. Configure as variáveis de ambiente no arquivo `.env`.
+
+4. Inicie o servidor:
+   ```bash
+   npm start
+
+## Equipe
 - Diego
 - Fillipe
 - Guilherme
 - Kauã
 
-  
 Aqui estão armazenados os códigos correspondentes às atividades práticas. Essas práticas visam fortalecer os conceitos aprendidos em sala, proporcionando oportunidades para aplicação e exercício das habilidades adquiridas.
-
-
-
-
