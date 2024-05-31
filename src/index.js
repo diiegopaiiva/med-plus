@@ -1,5 +1,5 @@
 import { server } from "./server/index.js";
 
-server.listen(5000, ()=> {
+server.listen(process.env.SERVER_PORT, ()=> {
     console.log("check")
 })
