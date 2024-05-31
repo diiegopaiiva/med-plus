@@ -1,0 +1,21 @@
+{
+  "type": "module",
+  "name": "pi-back",
+  "version": "1.0.0",
+  "description": "Este projeto é uma API RESTful desenvolvida utilizando o framework Express para gerenciar o agendamento de consultas e exames médicos. O sistema permite que pacientes mantenham seus cadastros atualizados, agendem consultas e associem essas consultas a médicos cadastrados. Além disso, a aplicação mantém um cadastro de médicos e clínicas de Brasília.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.2"
+  }
+}
