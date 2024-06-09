@@ -10,6 +10,13 @@ export async function validations({ params, data }) {
     });
   }
 
+  if (params === "Auth") {
+    validation_yup = yup.object().shape({
+      email: yup.string("Email invalido").required("Email obrigatório").email("Formato de email não validado"),
+      pass: yup.string("Senha invalida").required("Senha obrigatória")
+    });
+  }
+
   try {
     await validation_yup.validate(data, {abortEarly: false})
     return {status:true}
