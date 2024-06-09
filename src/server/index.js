@@ -1,13 +1,14 @@
-import express from "express"
-import "dotenv/config"
-import { router } from "../routes/index.js"
+import express from "express";
+import "dotenv/config";
+import { router } from "../routes/index.js";
+//import mongoose from "mongoose";
 
-const server = express()
+//mongoose.connect(process.env.MONGODB_URL);
 
-server.use(express.json())
+const server = express();
 
-server.use(router)
+server.use(express.json());
 
-export {
-    server
-}
+server.use(router);
+
+export { server };
