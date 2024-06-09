@@ -2,6 +2,13 @@ import * as yup from "yup";
 
 export async function validations({ params, data }) {
   let validation_yup;
+
+  if (params === "header") {
+    validation_yup = yup.object().shape({
+      token: yup.string("Token invalido").required("Token obrigatório")
+    });
+  }
+
   if (params === "create_user") {
     validation_yup = yup.object().shape({
       email: yup.string("Email invalido").required("Email obrigatório").email("Formato de email não valido"),
