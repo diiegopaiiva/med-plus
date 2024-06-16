@@ -39,6 +39,12 @@ export async function validations({ params, data }) {
     });
   }
 
+  if(params === "remove_doctor") {
+    validation_yup = yup.object().shape({
+      id:yup.string("Formato não é valido").required("Id obrigatorio")
+    })
+  }
+
   try {
     await validation_yup.validate(data, {abortEarly: false})
     return {status:true}

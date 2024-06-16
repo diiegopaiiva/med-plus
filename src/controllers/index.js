@@ -4,6 +4,7 @@ import { Auth } from "./login/auth.js";
 import { create_doctor } from "./doctors/create_doctor.js";
 import { select_doctor } from "./doctors/select_doctor.js";
 import { update_doctor } from "./doctors/update_doctor.js";
+import { remove_doctor } from "./doctors/remove_doctor.js";
 
 export const controllers = {
     users: {
@@ -16,6 +17,7 @@ export const controllers = {
     doctors: {
         create_doctor,
         select_doctor,
-        update_doctor
+        update_doctor,
+        remove_doctor
     }
 }
