@@ -7,6 +7,7 @@ import { select_user_token } from "./data_base/select_user_token.js";
 import { select_users } from "./data_base/select_users.js";
 import { insert_doctor } from "./data_base/insert_doctor.js";
 import { select_doctor } from "./data_base/select_doctor.js";
+import { update_doctor } from "./data_base/update_doctor.js";
 
 export const models = {
     validations,
@@ -17,5 +18,6 @@ export const models = {
     select_user_token,
     select_users,
     insert_doctor,
-    select_doctor
+    select_doctor,
+    update_doctor
 }
