@@ -17,6 +17,13 @@ export async function validations({ params, data }) {
     });
   }
 
+  if (params === "update_user") {
+    validation_yup = yup.object().shape({
+      pass: yup.string("Formato invalido").required("Nova senha obrigatoria").min(6, "minimo 6 caracteres"),
+      passConfirm: yup.string("Formato invalido").required("Senha origatoria").oneOf([yup.ref("pass"), null], "Senha não é igual")
+    })
+  }
+
   if (params === "Auth") {
     validation_yup = yup.object().shape({
       email: yup.string("Email invalido").required("Email obrigatório").email("Formato de email não validado"),

@@ -7,6 +7,7 @@ router.post("/login", controllers.login.Auth)
 
 router.post("/users", controllers.users.create_user)
 router.get("/users", controllers.users.select_user)
+router.put("/users", controllers.users.update_user)
 
 
 export {
