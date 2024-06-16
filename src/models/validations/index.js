@@ -24,6 +24,14 @@ export async function validations({ params, data }) {
     });
   }
 
+  if (params === "create_doctor") {
+    validation_yup = yup.object().shape({
+      name: yup.string("Formato invalido").required("Nome obrigatório").min(4, "Minimo quatro letras").max(20, "Maximo vinte letras"),
+      crm: yup.string("Formato invalido").required("Crm obrigatorio").min(9, "Minimo nove caracteres").max(9, "Maximo nove caracteres"),
+      specialty: yup.string("Especialidade invalida").required("Especialidade obrigatoria")
+    });
+  }
+
   try {
     await validation_yup.validate(data, {abortEarly: false})
     return {status:true}
@@ -35,4 +43,5 @@ export async function validations({ params, data }) {
 
     return {status: false, validation_erro}
   }
+  
 }
