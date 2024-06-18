@@ -31,6 +31,12 @@ export async function validations({ params, data }) {
     });
   }
 
+  if (params === "remove_user") {
+    validation_yup = yup.object().shape({
+      id: yup.string("Email invalido").required("ID é obrigatório")
+    });
+  }
+
   try {
     await validation_yup.validate(data, {abortEarly: false})
     return {status:true}
