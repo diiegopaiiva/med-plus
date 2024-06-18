@@ -32,6 +32,19 @@ export async function validations({ params, data }) {
     });
   }
 
+  if (params === "update_clinics") {
+    validation_yup = yup.object().shape({
+      address: yup.string("Formato invalido").required("Endereço obrigatorio"),
+      id: yup.string("Formato não é valido").required("Id obrigatorio")
+    });
+  }
+
+  if(params === "remove_clinics") {
+    validation_yup = yup.object().shape({
+      id:yup.string("Formato não é valido").required("Id obrigatorio")
+    })
+  }
+
   try {
     await validation_yup.validate(data, {abortEarly: false})
     return {status:true}
