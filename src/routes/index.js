@@ -8,6 +8,8 @@ router.post("/login", controllers.login.Auth)
 router.post("/users", controllers.users.create_user)
 router.get("/users", controllers.users.select_user)
 
+router.post("/clinics", controllers.clinics.create_clinics)
+
 
 export {
     router

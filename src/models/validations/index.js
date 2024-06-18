@@ -24,6 +24,14 @@ export async function validations({ params, data }) {
     });
   }
 
+  if (params === "create_clinics") {
+    validation_yup = yup.object().shape({
+      cnpj: yup.string("Formato invalido").required("Cnpj obrigatorio").min(14, "Minimo catorze letras").max(14, "Maximo catorze letras"),
+      razao_social: yup.string("Formato invalido").required("Razão social obrigatorio"),
+      address: yup.string("Formato invalido").required("Endereço obrigatorio")
+    });
+  }
+
   try {
     await validation_yup.validate(data, {abortEarly: false})
     return {status:true}
