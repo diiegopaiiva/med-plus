@@ -24,6 +24,27 @@ export async function validations({ params, data }) {
     });
   }
 
+  if (params === "create_appointments") {
+    validation_yup = yup.object().shape({
+      idUser: yup.string("formato inválido").required("id do usuário obrigatório"),
+      idClinics: yup.string("formato inválido").required("id da clinica obrigatória"),
+      idDoctors: yup.string("formato inválido").required("id do médico obrigatório"),
+    });
+  }
+
+  if (params === "update_appointments") {
+    validation_yup = yup.object().shape({
+      date: yup.date("Formato invalido").required("Data obrigatoria"),
+      id: yup.string("Formato não é valido").required("Id obrigatorio")
+    });
+  }
+
+  if(params === "remove_appointments") {
+    validation_yup = yup.object().shape({
+      id:yup.string("Formato não é valido").required("Id obrigatorio")
+    })
+  }
+
   try {
     await validation_yup.validate(data, {abortEarly: false})
     return {status:true}
