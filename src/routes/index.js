@@ -10,6 +10,11 @@ router.get("/users", controllers.users.select_user)
 router.put("/users", controllers.users.update_user)
 router.delete("/users", controllers.users.remove_user)
 
+router.post("/appointments", controllers.appointments.create_appointments)
+router.get("/appointments", controllers.appointments.select_appointments)
+router.put("/appointments", controllers.appointments.update_appointements)
+router.delete("/appointments", controllers.appointments.remove_appointments)
+
 router.post("/clinics", controllers.clinics.create_clinics)
 router.get("/clinics", controllers.clinics.select_clinics)
 router.put("/clinics", controllers.clinics.update_clinics)

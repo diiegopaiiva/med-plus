@@ -5,7 +5,7 @@ export async function select_user_token({token}){
     const params = [token];
 
     const responseDatabase = await execute({ query, params });
-    console.log(params)
+    
 
     if(!responseDatabase.status){
         return { status: false, message: "erro ao executar tarefa no banco de dados"};
