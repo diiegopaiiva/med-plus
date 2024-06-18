@@ -30,11 +30,32 @@ export async function validations({ params, data }) {
       pass: yup.string("Senha invalida").required("Senha obrigatória")
     });
   }
-
+  
   if (params === "remove_user") {
     validation_yup = yup.object().shape({
       id: yup.string("Email invalido").required("ID é obrigatório")
     });
+  }
+
+  if (params === "create_doctor") {
+    validation_yup = yup.object().shape({
+      name: yup.string("Formato invalido").required("Nome obrigatório").min(4, "Minimo quatro letras").max(20, "Maximo vinte letras"),
+      crm: yup.string("Formato invalido").required("Crm obrigatorio").min(9, "Minimo nove caracteres").max(9, "Maximo nove caracteres"),
+      specialty: yup.string("Especialidade invalida").required("Especialidade obrigatoria")
+    });
+  }
+
+  if (params === "update_doctor") {
+    validation_yup = yup.object().shape({
+      specialty: yup.string("Especialidade invalida").required("Especialidade obrigatoria"),
+      id: yup.string("Formato não é valido").required("Id obrigatorio")
+    });
+  }
+
+  if(params === "remove_doctor") {
+    validation_yup = yup.object().shape({
+      id:yup.string("Formato não é valido").required("Id obrigatorio")
+    })
   }
 
   try {
@@ -48,4 +69,5 @@ export async function validations({ params, data }) {
 
     return {status: false, validation_erro}
   }
+  
 }
