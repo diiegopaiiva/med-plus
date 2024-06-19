@@ -15,8 +15,7 @@ Este projeto é uma API RESTful desenvolvida utilizando o framework Express para
 
 - Node.js
 - Express.js
-- MongoDB
-- Mongoose
+- SQL
 - JWT (JSON Web Token) para autenticação
 - Bcrypt.js para hash de senhas
 - Nodemailer para envio de e-mails
@@ -38,7 +37,7 @@ Este projeto é uma API RESTful desenvolvida utilizando o framework Express para
 ### Pré-requisitos
 
 - Node.js e npm
-- MongoDB
+- SQL
 
 ### Passos
 
