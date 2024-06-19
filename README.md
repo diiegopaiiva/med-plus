@@ -57,9 +57,9 @@ Este projeto é uma API RESTful desenvolvida utilizando o framework Express para
    npm start
 
 ## Equipe
-- Diego
-- Fillipe
-- Guilherme
-- Kauã
+- Diego Paiva
+- Fillipe Ferreira
+- Guilherme Morais
+- Kauã Vithenzo
 
 Aqui estão armazenados os códigos correspondentes às atividades práticas. Essas práticas visam fortalecer os conceitos aprendidos em sala, proporcionando oportunidades para aplicação e exercício das habilidades adquiridas.
