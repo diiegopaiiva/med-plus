@@ -30,12 +30,14 @@ export const controllers = {
         create_appointments,
         select_appointments,
         update_appointements,
-        remove_appointments,
+        remove_appointments
+    },
     clinics:{
         create_clinics,
         select_clinics,
         update_clinics,
-        remove_clinics,
+        remove_clinics
+    },
     doctors: {
         create_doctor,
         select_doctor,
