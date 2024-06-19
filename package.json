@@ -1,11 +1,14 @@
 {
   "type": "module",
   "name": "pi-back",
+  "jest": {
+    "transform": {}
+  },
   "version": "1.0.0",
   "description": "Este projeto é uma API RESTful desenvolvida utilizando o framework Express para gerenciar o agendamento de consultas e exames médicos. O sistema permite que pacientes mantenham seus cadastros atualizados, agendem consultas e associem essas consultas a médicos cadastrados. Além disso, a aplicação mantém um cadastro de médicos e clínicas de Brasília.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "dev": "nodemon src/index.js"
   },
   "keywords": [],
@@ -22,6 +25,8 @@
     "yup": "^1.4.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.2"
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.2",
+    "supertest": "^7.0.0"
   }
 }
